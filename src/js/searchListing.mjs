@@ -5,6 +5,7 @@ import { createMainItemListing } from "./components/createHtml/createMainItemLis
 const baseUrl = "https://api.noroff.dev/api/v1/auction";
 
 const searchInput = document.querySelector("#search-input");
+
 console.log(searchInput);
 
 export async function getListingsFromSearch() {
@@ -30,9 +31,9 @@ export async function getListingsFromSearch() {
 }
 
 searchInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-        console.log("Hei")
-        getListingsFromSearch()
-    }
+        if (e.key === "Enter") {
+            console.log("Hei")
+            getListingsFromSearch()
+        }
   });
   
