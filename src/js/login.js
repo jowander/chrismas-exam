@@ -34,7 +34,7 @@ async function logIn(url) {
       body: JSON.stringify(userLogin),
     };
 
-    const response = await fetch(url, postData);
+    const response = await fetch(url, postData);;
     const jsonResponse = await response.json();
     const userName = jsonResponse.name;
     const accessToken = jsonResponse.accessToken;
