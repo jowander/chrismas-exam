@@ -1,7 +1,7 @@
 "use strict";
 import {
-  apiCallGetListings,
-  optionGet,
+    apiCallGetListings,
+    optionGet,
 } from "../components/apiCall/apiCallGetListings.mjs";
 import { createSpesificProfileImage } from "../components/createHtml/createSpesificProfileImage.mjs";
 import { createSpesificListingInfo } from "../components/createHtml/createSpesificListingInfo.mjs";
@@ -20,8 +20,8 @@ const spesificListingBids = document.querySelector("#display-bids");
 console.log(spesificListingBids);
 
 const json = await apiCallGetListings(
-  `${baseUrl}/listings/${id}?_seller=true`,
-  optionGet
+    `${baseUrl}/listings/${id}?_seller=true`,
+    optionGet
 );
 
 console.log(createSpesificProfileImage(spesificItem, json));
@@ -30,6 +30,6 @@ createSpesificListingInfo(spesificListingInfo, json);
 const listingsOwner = json.seller.name;
 
 if (user === listingsOwner) {
-  listingBtn.classList.contains("listing-btn");
-  listingBtn.classList.remove("hidden");
+    listingBtn.classList.contains("listing-btn");
+    listingBtn.classList.remove("hidden");
 }

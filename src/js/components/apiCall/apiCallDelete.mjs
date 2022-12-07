@@ -7,23 +7,23 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
 export async function deleteListing() {
-  try {
-    const options = {
-      method: "DELETE",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    };
-    const response = await fetch(`${baseUrl}/listings/${id}`, options);
-    console.log(response);
-    const json = await response.json();
-    console.log(json);
-  } catch (error) {
-    console.log(error);
-  } finally {
-    window.location.href = "./spesificProfile.html";
-  }
+    try {
+        const options = {
+            method: "DELETE",
+            headers: {
+                Authorization: `Bearer ${token}`,
+                "Content-type": "application/json; charset=UTF-8",
+            },
+        };
+        const response = await fetch(`${baseUrl}/listings/${id}`, options);
+        console.log(response);
+        const json = await response.json();
+        console.log(json);
+    } catch (error) {
+        console.log(error);
+    } finally {
+        window.location.href = "./spesificProfile.html";
+    }
 }
 
 document.querySelector("#delete-btn").addEventListener("click", deleteListing);
