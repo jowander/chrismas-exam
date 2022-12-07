@@ -5,7 +5,7 @@ export function createSpesificListingInfo(profileInfo, json) {
                                                         <p>${json.description}</p>
                                                     </div>
                                                     <div class="">
-                                                        <p class="text-xs">Ends: ${json.endsAt}</p>
+                                                        <p id="countdown" class="text-xs">Ends: ${json.endsAt}</p>
                                                     </div>`);
     return createHtml;
 }

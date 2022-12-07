@@ -17,9 +17,10 @@ const spesificListingBids = document.querySelector("#display-bids");
 console.log(spesificListingBids);
 
 const json = await apiCallGetListings(`${baseUrl}/listings/${id}?_seller=true`, optionGet);
-createSpesificProfileImage(spesificItem, json);
-createSpesificListingInfo(spesificListingInfo, json);
 
+console.log(createSpesificProfileImage(spesificItem, json));
+createSpesificListingInfo(spesificListingInfo, json);
+//spesificItem.innerHTML = "";
 const listingsOwner = json.seller.name;
 
 if (user === listingsOwner) {

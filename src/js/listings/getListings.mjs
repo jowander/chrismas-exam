@@ -2,7 +2,7 @@
 import { apiCallGetListings, optionGet } from "../components/apiCall/apiCallGetListings.mjs";
 import { apiCallProfiles, optionGetAuth } from "../components/apiCall/apiCallGetProfiles.mjs";
 import { createMainItemListing } from "../components/createHtml/createMainItemListing.mjs";
-import { createProfileAvatar } from "../components/createHtml/createProfileAvatar.mjs"; 
+import { createProfileAvatar } from "../components/createHtml/createProfileAvatar.mjs";
 
 const baseUrl = "https://api.noroff.dev/api/v1/auction";
 
