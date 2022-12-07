@@ -1,5 +1,6 @@
 export function createBidInfo(spesificListingBids, bidderName, amount) {
-        const createHtml = (spesificListingBids.innerHTML += `<div class="card border rounded-lg mx-4 my-8">  
+  const createHtml =
+    (spesificListingBids.innerHTML += `<div class="card border rounded-lg mx-4 my-8">  
                                                         <div class="">
                                                             <h2>${bidderName}</h2>
                                                         </div>
@@ -8,5 +9,5 @@ export function createBidInfo(spesificListingBids, bidderName, amount) {
                                                                 <h2 class="text-lg py-2">${amount}</h2>
                                                             </div>
                                                     </div>`);
-        return createHtml;
+  return createHtml;
 }

@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 const url = "https://api.noroff.dev/api/v1/auction/auth/login";
 
 const userEmail = document.querySelector("#email");
@@ -34,7 +34,7 @@ async function logIn(url) {
       body: JSON.stringify(userLogin),
     };
 
-    const response = await fetch(url, postData);;
+    const response = await fetch(url, postData);
     const jsonResponse = await response.json();
     const userName = jsonResponse.name;
     const accessToken = jsonResponse.accessToken;

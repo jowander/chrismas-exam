@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
     "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "live": "live-server"
+    "live": "live-server",
+    "format": "prettier -w src/**/*.{html,js,mjs}"
   },
   "author": "",
   "license": "ISC",
