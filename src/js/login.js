@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 const url = "https://api.noroff.dev/api/v1/auction/auth/login";
 
 const userEmail = document.querySelector("#email");

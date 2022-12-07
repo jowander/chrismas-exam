@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 // import { apiCallPostListing } from "../components/apiCall/apiCallPostListings.mjs";
 
 // const baseUrl = "https://api.noroff.dev/api/v1/auction";
