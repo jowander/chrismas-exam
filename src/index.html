@@ -7,7 +7,6 @@
     <script src="./js/listings/getListings.mjs" type="module"></script>
     <script src="./js/components/createHtml/createMainItemListing.mjs" type="module"></script>
     <script src="./js/searchListing.mjs" type="module"></script>
-    <script src="openLoginModal.mjs" type="module"></script>
     <link rel="stylesheet" href="../dist/output.css">
     <title>Listings</title>
 </head>
@@ -23,29 +22,6 @@
         </ul>
     </nav>
 
-      <!-- Login modal -->
-  <div id="login-modal" tabindex="-1" class="open-bid-modal hidden fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
-    <div class="relative w-full h-full max-w-md md:h-auto">
-        <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <div class="px-6 py-6 lg:px-8">
-                <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Place your bid</h3>
-                <form id="bid-form" class="space-y-6">
-                    <div class="">
-                        <label for="bid" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Bid amount</label>
-                        <input type="email" name="login" id="login" class="border rounded-sm w-11/12 p-1 my-2" placeholder="email" required>
-                        <input type="text" name="login-password" id="login-password" class="border rounded-sm w-11/12 p-1 my-2" placeholder="Password" required>
-                    </div>
-                    <div class="text-center">
-                        <button id="login-btn-modal" type="submit" class="rounded-2xl bg-secondaryGreen text-fontColor py-1 px-4">Place bid</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div> 
-
-
     <main>
         <div class="w-screen">
             <div class="flex justify-between p-2 bg-secondaryGreen">
@@ -56,8 +32,8 @@
                     
                 </div>
             </div>
-            <div class="text-end p-2">
-                <button id="login-btn" class="rounded-2xl bg-primaryGreen text-fontColor my-2 py-1 px-4">Login</button>
+            <div id="login-btn" class="text-end p-2">
+                <a href="./login.html" class="rounded-2xl bg-primaryGreen text-fontColor my-2 py-1 px-4">Login</a>
             </div>
         </div>
         <div class="text-center my-4">
