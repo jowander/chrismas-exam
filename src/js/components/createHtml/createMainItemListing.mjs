@@ -1,7 +1,7 @@
 "use strict";
 export function createMainItemListing(itemCard, json) {
-  const createHtml =
-    (itemCard.innerHTML += `<div class="card border rounded-lg mx-4 my-8">  
+    const createHtml =
+        (itemCard.innerHTML += `<div class="card border rounded-lg mx-4 my-8">  
                                                     <div class="">
                                                         <img class=" rounded-t-lg" src="${json.media}" alt="" onerror="this.src = '../../../images/userPlacegolder.png';">
                                                     </div>
@@ -17,5 +17,5 @@ export function createMainItemListing(itemCard, json) {
                                                         </div>
                                                     </div>
                                                 </div>`);
-  return createHtml;
+    return createHtml;
 }

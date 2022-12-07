@@ -8,19 +8,19 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
 async function getBids() {
-  try {
-    const response = await fetch(`${baseUrl}/listings/${id}?_bids=true`);
-    const json = await response.json();
-    const spesificListingBids = document.querySelector("#display-bids");
+    try {
+        const response = await fetch(`${baseUrl}/listings/${id}?_bids=true`);
+        const json = await response.json();
+        const spesificListingBids = document.querySelector("#display-bids");
 
-    const data = json.bids;
-    data.forEach((bid) => {
-      createBidInfo(spesificListingBids, bid.bidderName, bid.amount);
-    });
-    console.log(data);
-  } catch (error) {
-    console.log(error);
-  }
+        const data = json.bids;
+        data.forEach((bid) => {
+            createBidInfo(spesificListingBids, bid.bidderName, bid.amount);
+        });
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 document.querySelector("#show-bids-btn").addEventListener("click", getBids);
