@@ -38,7 +38,6 @@ export async function getProfileListingsFromSearch() {
 
 searchProfileInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
-        console.log("Hei");
         getProfileListingsFromSearch();
     }
 });
