@@ -4,6 +4,11 @@ const url = "https://api.noroff.dev/api/v1/auction/auth/login";
 const userEmail = document.querySelector("#email");
 const password = document.querySelector("#password");
 const loginForm = document.querySelector("#loginForm");
+const enterWithoutLogin = document.querySelector("#without-login-btn");
+
+enterWithoutLogin.addEventListener("click", () => {
+    localStorage.clear();
+});
 
 loginForm.addEventListener("submit", handleLogin);
 
