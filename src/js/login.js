@@ -5,6 +5,7 @@ const userEmail = document.querySelector("#email");
 const password = document.querySelector("#password");
 const loginForm = document.querySelector("#loginForm");
 const enterWithoutLogin = document.querySelector("#without-login-btn");
+console.log(enterWithoutLogin);
 
 enterWithoutLogin.addEventListener("click", () => {
     localStorage.clear();
@@ -21,7 +22,7 @@ async function handleLogin(e) {
     };
     const response = await logIn(url, userLogin);
     if (response.status === 200) {
-        window.location.href = "./index.html";
+        window.location.href = "../index.html";
     }
 }
 
