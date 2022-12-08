@@ -18,10 +18,10 @@ const itemCard = document.querySelector("#item-card");
 const profileAvatar = document.querySelector("#profile-avatar");
 
 const json = await apiCallGetListings(`${baseUrl}/listings`, optionGet);
+itemCard.innerHTML = "";
 for (let i = 0; i < json.length; i++) {
     const jsonData = json[i];
     if (i <= 9) {
-        itemCard.innerHTML = "";
         createMainItemListing(itemCard, jsonData);
     }
 }

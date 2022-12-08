@@ -5,7 +5,7 @@ import {
 } from "../components/apiCall/apiCallGetProfiles.mjs";
 import { createSpesificProfile } from "../components/createHtml/createSpesificProfileInfo.mjs";
 import { apiCallGetListings } from "../components/apiCall/apiCallGetListings.mjs";
-import { createMainItemListing } from "../components/createHtml/createMainItemListing.mjs";
+import { createProfileListing } from "../components/createHtml/createProfileListing.mjs";
 import { createProfileAvatarWithName } from "../components/createHtml/createProfileAvatarWithName.mjs";
 
 const baseUrl = "https://api.noroff.dev/api/v1/auction";
@@ -21,7 +21,9 @@ const json = await apiCallProfiles(
     `${baseUrl}/profiles/${user}`,
     optionGetAuth
 );
-//console.log(json);
+
+profileListings.innerHTML = "";
+
 createProfileAvatarWithName(profileAvatarWithName, json);
 createSpesificProfile(profileInformation, json);
 
@@ -31,5 +33,5 @@ const jsonListings = await apiCallGetListings(
 );
 for (let i = 0; i < jsonListings.length; i++) {
     const jsonData = jsonListings[i];
-    createMainItemListing(profileListings, jsonData);
+    createProfileListing(profileListings, jsonData);
 }

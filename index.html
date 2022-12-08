@@ -4,26 +4,40 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="./js/listings/getListings.mjs" type="module"></script>
+        <script src="./src/js/listings/getListings.mjs" type="module"></script>
         <script
-            src="./js/components/createHtml/createMainItemListing.mjs"
+            src="./src/js/components/createHtml/createMainItemListing.mjs"
             type="module"
         ></script>
-        <script src="./js/searchListing.mjs" type="module"></script>
+        <script src="./src/js/searchListing.mjs" type="module"></script>
+        <script src="./src/js/hamburgerMenu.mjs" type="module"></script>
         <link rel="stylesheet" href="../dist/output.css" />
         <title>Listings</title>
     </head>
     <body>
         <nav class="flex justify-between bg-primaryGreen">
             <h1 class="font-bold text-fontColor p-4 text-2xl">Auction House</h1>
-            <div class="p-4 md:hidden">
-                <img src="../images/hamburger.png" alt="hamburger icon" />
-            </div>
-            <ul class="flex p-4 my-auto hidden">
-                <li><a class="p-2" href="#">Home</a></li>
-                <li><a class="p-2" href="#">Profile</a></li>
-            </ul>
+            <div class="p-4 md:hidden"></div>
         </nav>
+        <ul
+            class="nav-links flex p-4 my-auto hidden bg-primaryGreen justify-evenly"
+        >
+            <li>
+                <a
+                    class="hover:bg-violet-700 p-2 text-fontColor"
+                    href="./index.html"
+                    >Home</a
+                >
+            </li>
+            <li>
+                <a class="p-2 text-fontColor" href="./src/spesificProfile.html"
+                    >Profile</a
+                >
+            </li>
+            <li>
+                <a class="p-2 text-fontColor" href="./src/login.html">Login</a>
+            </li>
+        </ul>
 
         <main>
             <div class="w-screen">
@@ -38,16 +52,11 @@
                     </div>
                     <div id="profile-avatar"></div>
                 </div>
-                <div id="login-btn" class="text-end p-2">
-                    <a
-                        href="./login.html"
-                        class="rounded-2xl bg-primaryGreen text-fontColor my-2 py-1 px-4"
-                        >Login</a
-                    >
-                </div>
             </div>
             <div class="text-center my-4">
-                <h2 class="text-primaryGreen text-2xl">View Listings</h2>
+                <h2 class="font-semibold text-primaryGreen text-2xl">
+                    View Listings
+                </h2>
             </div>
             <div id="item-card" class="mx-auto">
                 <div class="text-center my-4">

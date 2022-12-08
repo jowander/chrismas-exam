@@ -4,6 +4,12 @@ const url = "https://api.noroff.dev/api/v1/auction/auth/login";
 const userEmail = document.querySelector("#email");
 const password = document.querySelector("#password");
 const loginForm = document.querySelector("#loginForm");
+const enterWithoutLogin = document.querySelector("#without-login-btn");
+console.log(enterWithoutLogin);
+
+enterWithoutLogin.addEventListener("click", () => {
+    localStorage.clear();
+});
 
 loginForm.addEventListener("submit", handleLogin);
 
@@ -16,7 +22,7 @@ async function handleLogin(e) {
     };
     const response = await logIn(url, userLogin);
     if (response.status === 200) {
-        window.location.href = "./index.html";
+        window.location.href = "../index.html";
     }
 }
 
