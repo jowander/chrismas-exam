@@ -24,7 +24,7 @@ const json = await apiCallGetListings(
     optionGet
 );
 
-console.log(createSpesificProfileImage(spesificItem, json));
+createSpesificProfileImage(spesificItem, json);
 createSpesificListingInfo(spesificListingInfo, json);
 //spesificItem.innerHTML = "";
 const listingsOwner = json.seller.name;
