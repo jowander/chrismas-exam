@@ -5,6 +5,7 @@ import {
 } from "../components/apiCall/apiCallGetListings.mjs";
 import { createSpesificProfileImage } from "../components/createHtml/createSpesificProfileImage.mjs";
 import { createSpesificListingInfo } from "../components/createHtml/createSpesificListingInfo.mjs";
+import { countdown } from "../countdown.mjs";
 
 const baseUrl = "https://api.noroff.dev/api/v1/auction";
 const user = localStorage.getItem("userName");
@@ -16,16 +17,22 @@ const id = params.get("id");
 const listingBtn = document.querySelector("#spesific-listing-btn");
 const spesificItem = document.querySelector("#item-images");
 const spesificListingInfo = document.querySelector("#profile-info");
-const spesificListingBids = document.querySelector("#display-bids");
-console.log(spesificListingBids);
+// const bidTimer = document.querySelector(".countdown");
+// const spesificListingBids = document.querySelector("#display-bids");
 
 const json = await apiCallGetListings(
     `${baseUrl}/listings/${id}?_seller=true`,
     optionGet
 );
 
-console.log(createSpesificProfileImage(spesificItem, json));
+console.log(json.endsAt);
+const parsedTime = Date.parse(json.endsAt);
+console.log(parsedTime);
+
+createSpesificProfileImage(spesificItem, json);
 createSpesificListingInfo(spesificListingInfo, json);
+//countdown(showDay, showHour, showMinute, showSecond, listingTime);
+setInterval(countdown, 1000, parsedTime);
 //spesificItem.innerHTML = "";
 const listingsOwner = json.seller.name;
 
