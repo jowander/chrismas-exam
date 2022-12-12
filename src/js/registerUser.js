@@ -1,7 +1,8 @@
 "use strict";
 const baseUrl = "https://api.noroff.dev/api/v1/auction";
 
-async function registerUser() {
+async function registerUser(e) {
+    e.preventDefault();
     try {
         const userName = document.querySelector("#user-name").value;
         const userEmail = document.querySelector("#user-email").value;
@@ -11,11 +12,11 @@ async function registerUser() {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: {
+            body: JSON.stringify({
                 name: userName,
                 email: userEmail,
                 password: userPassword,
-            },
+            }),
         };
         const response = await fetch(`${baseUrl}/auth/register`, options);
         const json = await response.json();
