@@ -28,6 +28,7 @@
             type="module"
         ></script>
         <script src="./js/openBidModal.mjs" type="module"></script>
+        <script src="./js/countdown.mjs" type="module"></script>
         <!-- <script src="./js/components/apiCall/apiCallUpdateListing.mjs" type="module"></script> -->
         <link rel="stylesheet" href="../dist/output.css" />
         <title>Spesific Item</title>
@@ -123,6 +124,24 @@
                         </div>
                         <div class="text-center">
                             <div id="profile-info"></div>
+                            <div class="countdown flex justify-evenly">
+                                <div class="container-day">
+                                    <p class="day">Time</p>
+                                    <p>Day</p>
+                                </div>
+                                <div class="container-hour">
+                                    <p class="hour">Time</p>
+                                    <p>Hour</p>
+                                </div>
+                                <div class="container-minute">
+                                    <p class="minute">Time</p>
+                                    <p>Minute</p>
+                                </div>
+                                <div class="container-second">
+                                    <p class="second">Time</p>
+                                    <p>Second</p>
+                                </div>
+                            </div>
                             <div class="flex justify-evenly py-4">
                                 <button
                                     id="show-bids-btn"
