@@ -17,16 +17,19 @@
     <body>
         <nav class="flex justify-between bg-primaryGreen">
             <h1 class="font-bold text-fontColor p-4 text-2xl">Auction House</h1>
-            <div class="p-4 md:hidden"></div>
-            <div id="hamburger" class="md:hidden items-center">
-                <div class="bar-1 md:hidden"></div>
-                <div class="bar-2 md:hidden"></div>
-                <div class="bar-3 md:hidden"></div>
+            <div class="md:hidden">
+                <button
+                    id="menu-btn"
+                    type="button"
+                    class="open z-40 block hamburger md:hidden focus:outline-none"
+                >
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
             </div>
         </nav>
-        <ul
-            class="nav-links flex p-4 my-auto sm:hidden bg-primaryGreen justify-evenly"
-        >
+        <ul class="nav-links p-4 my-auto hidden bg-primaryGreen justify-evenly">
             <li>
                 <a
                     class="hover:bg-violet-700 p-2 text-fontColor"

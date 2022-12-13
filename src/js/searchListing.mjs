@@ -6,8 +6,6 @@ const baseUrl = "https://api.noroff.dev/api/v1/auction";
 
 const searchInput = document.querySelector("#search-input");
 
-console.log(searchInput);
-
 export async function getListingsFromSearch() {
     try {
         const searchInputValue = searchInput.value;
@@ -22,7 +20,12 @@ export async function getListingsFromSearch() {
             const listingsFiltered = searchInputValue.trim().toLowerCase();
 
             if (listingTitles.includes(listingsFiltered)) {
-                createMainItemListing(itemCard, json[i]);
+                createMainItemListing(
+                    itemCard,
+                    json[i].media,
+                    json[i].title,
+                    json[i].id
+                );
             }
         }
     } catch (error) {
