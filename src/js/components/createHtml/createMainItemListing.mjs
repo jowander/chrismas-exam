@@ -1,12 +1,12 @@
 "use strict";
 export function createMainItemListing(itemCard, media, title, id) {
     const createHtml =
-        (itemCard.innerHTML += `<div class="card border rounded-lg mx-4 my-8">  
+        (itemCard.innerHTML += `<div class="card border border-secondaryGreen rounded-lg w-64 m-8">  
                                     <div class="">
-                                        <img class="rounded-t-lg" src="${media}" alt="" onerror="this.src = '../../../images/userPlacegolder.png';">
+                                        <img class="rounded-t-lg w-64 h-64" src="${media}" alt="" onerror="this.src = '../../../images/userPlacegolder.png';">
                                     </div>
                                     <div class="text-center">
-                                        <div class="py-2">
+                                        <div class="h-24">
                                             <h2 class="text-primaryGreen text-xl py-2">${title}</h2>
                                         </div>
                                         <div class="py-4">
