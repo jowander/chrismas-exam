@@ -1,10 +1,13 @@
 "use strict";
 const hamburgerMenu = document.querySelector("#hamburger");
 const navLinks = document.querySelector(".nav-links");
-const hamburger = document.querySelector(".relative");
-console.log(hamburger);
 
-hamburgerMenu.addEventListener("click", () => {
-    console.log(hamburger);
-    navLinks.classList.toggle("hidden");
-});
+function hamburgerToggle() {
+    if (navLinks.classList.contains("nav-links")) {
+        navLinks.classList.remove("hidden");
+    } else {
+        navLinks.classList.add("hidden");
+    }
+}
+
+hamburgerMenu.addEventListener("click", hamburgerToggle);
