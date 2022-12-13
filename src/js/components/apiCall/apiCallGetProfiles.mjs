@@ -1,6 +1,4 @@
 "use strict";
-//import { createSpesificProfile } from "../components/createHtml/createSpesificProfile.mjs";
-
 export async function apiCallProfiles(baseUrl, headers) {
     try {
         const response = await fetch(baseUrl, headers);

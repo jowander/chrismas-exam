@@ -28,6 +28,8 @@ export async function editAvatar(e) {
         console.log(json);
     } catch (error) {
         console.log(error);
+    } finally {
+        window.location.reload();
     }
 }
 
