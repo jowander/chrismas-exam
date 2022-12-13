@@ -23,6 +23,7 @@ const json = await apiCallGetListings(
     optionGet
 );
 
+
 console.log(json.endsAt);
 const parsedTime = Date.parse(json.endsAt);
 console.log(parsedTime);
@@ -32,6 +33,7 @@ console.log(parsedTime);
 // const showMinute = document.querySelector(".minute");
 // const showSecond = document.querySelector(".second");
 sessionStorage.setItem("bidEnd", json.endsAt);
+
 
 createSpesificProfileImage(spesificItem, json);
 createSpesificListingInfo(spesificListingInfo, json);

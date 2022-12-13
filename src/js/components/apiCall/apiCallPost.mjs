@@ -25,6 +25,9 @@ export async function addPost(e) {
             }),
         };
 
+        const mediaArray = options.body.media;
+        console.log(mediaArray);
+
         const response = await fetch(`${baseUrl}/listings`, options);
         const json = await response.json();
         console.log(json);
