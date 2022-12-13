@@ -1,9 +1,11 @@
 "use strict";
-const hamburgerMenu = document.querySelector("#hamburger");
-const navLinks = document.querySelector(".nav-links");
-console.log(navLinks);
+const btn = document.querySelector("#menu-btn");
+const menu = document.querySelector("#menu");
 
-hamburgerMenu.addEventListener("click", () => {
-    navLinks.classList.toggle("hidden");
-    console.log("click");
-});
+btn.addEventListener("click", navToggle);
+
+function navToggle() {
+    btn.classList.toggle("open");
+    menu.classList.toggle("hidden");
+    menu.classList.toggle("flex");
+}
