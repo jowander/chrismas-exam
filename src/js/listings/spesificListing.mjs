@@ -17,7 +17,7 @@ const id = params.get("id");
 const listingBtn = document.querySelector("#spesific-listing-btn");
 const spesificItem = document.querySelector("#item-images");
 const spesificListingInfo = document.querySelector("#profile-info");
-// const bidTimer = document.querySelector(".countdown");
+const bidTimer = document.querySelector(".countdown");
 // const spesificListingBids = document.querySelector("#display-bids");
 
 const json = await apiCallGetListings(
@@ -29,10 +29,14 @@ console.log(json.endsAt);
 const parsedTime = Date.parse(json.endsAt);
 console.log(parsedTime);
 
+const showDay = document.querySelector(".day");
+const showHour = document.querySelector(".hour");
+const showMinute = document.querySelector(".minute");
+const showSecond = document.querySelector(".second");
+
 createSpesificProfileImage(spesificItem, json);
 createSpesificListingInfo(spesificListingInfo, json);
-//countdown(showDay, showHour, showMinute, showSecond, listingTime);
-setInterval(countdown, 1000, parsedTime);
+countdown(showDay, showHour, showMinute, showSecond, parsedTime, bidTimer);
 //spesificItem.innerHTML = "";
 const listingsOwner = json.seller.name;
 

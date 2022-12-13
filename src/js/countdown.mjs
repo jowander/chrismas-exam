@@ -1,26 +1,26 @@
 "use strict";
-import {
-    apiCallGetListings,
-    optionGet,
-} from "./components/apiCall/apiCallGetListings.mjs";
+// import {
+//     apiCallGetListings,
+//     optionGet,
+// } from "./components/apiCall/apiCallGetListings.mjs";
 
-const queryString = window.location.search;
-const params = new URLSearchParams(queryString);
-const id = params.get("id");
+// const queryString = window.location.search;
+// const params = new URLSearchParams(queryString);
+// const id = params.get("id");
 
-const baseUrl = "https://api.noroff.dev/api/v1/auction";
+// const baseUrl = "https://api.noroff.dev/api/v1/auction";
 
-const json = await apiCallGetListings(
-    `${baseUrl}/listings/${id}?_seller=true`,
-    optionGet
-);
+// const json = await apiCallGetListings(
+//     `${baseUrl}/listings/${id}?_seller=true`,
+//     optionGet
+// );
 
-console.log(json);
-console.log(json.endsAt);
-const parsedTime = json.endsAt;
-console.log(parsedTime);
+// console.log(json);
+// console.log(json.endsAt);
+// const parsedTime = json.endsAt;
+// console.log(parsedTime);
 
-export const countdown = (bidEnd) => {
+export function countdown(bidEnd) {
     const endTime = Date.parse(bidEnd);
     console.log(endTime);
 
@@ -48,6 +48,6 @@ export const countdown = (bidEnd) => {
         textSecond);
 
     return { showDay, showHour, showMinute, showSecond };
-};
+}
 
 setInterval(countdown, 1000);
