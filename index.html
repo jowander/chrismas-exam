@@ -15,34 +15,35 @@
         <title>Listings</title>
     </head>
     <body>
-        <nav class="flex justify-between bg-primaryGreen">
-            <h1 class="font-bold text-fontColor p-4 text-2xl">Auction House</h1>
-            <div class="p-4 md:hidden"></div>
-            <div id="hamburger" class="md:hidden items-center">
-                <div class="bar-1 md:hidden"></div>
-                <div class="bar-2 md:hidden"></div>
-                <div class="bar-3 md:hidden"></div>
+        <nav class="flex items-center justify-between text-fontColor">
+            <div class="h10 md:flex md:space-x-8">
+                <div class="group">
+                    <a href="./index.html">Home</a>
+                </div>
             </div>
         </nav>
-        <ul
-            class="nav-links flex p-4 my-auto sm:hidden bg-primaryGreen justify-evenly"
+        <div class="flex justify-between bg-primaryGreen">
+            <h1 class="font-bold text-fontColor p-4 text-2xl">Auction House</h1>
+            <div>
+                <button
+                    id="menu-btn"
+                    type="button"
+                    class="z-40 block hamburger focus:outline-none"
+                >
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+            </div>
+        </div>
+        <div
+            id="menu"
+            class="top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-center text-fontColor bg-primaryGreen"
         >
-            <li>
-                <a
-                    class="hover:bg-violet-700 p-2 text-fontColor"
-                    href="./index.html"
-                    >Home</a
-                >
-            </li>
-            <li>
-                <a class="p-2 text-fontColor" href="./src/spesificProfile.html"
-                    >Profile</a
-                >
-            </li>
-            <li>
-                <a class="p-2 text-fontColor" href="./src/login.html">Login</a>
-            </li>
-        </ul>
+            <a href="./index.html" class="">Home</a>
+            <a href="./src/spesificProfile.html" class="">Profile</a>
+            <a href="./src/login.html" class="">Login</a>
+        </div>
 
         <main>
             <div class="w-screen">

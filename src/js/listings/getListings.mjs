@@ -18,10 +18,10 @@ const itemCard = document.querySelector("#item-card");
 const profileAvatar = document.querySelector("#profile-avatar");
 
 const json = await apiCallGetListings(
-    `${baseUrl}/listings?limit=30&_active=true`,
+    `${baseUrl}/listings?limit=20&_active=true`,
     optionGet
 );
-console.log(json);
+
 itemCard.innerHTML = "";
 for (let i = 0; i < json.length; i++) {
     const jsonData = json[i];
@@ -39,8 +39,9 @@ const jsonProfile = await apiCallProfiles(
     `${baseUrl}/profiles/${user}`,
     optionGetAuth
 );
-console.log(jsonProfile);
-document.querySelector("#show-more").addEventListener("click", () => {
+
+const showMore = document.querySelector("#show-more");
+showMore.addEventListener("click", () => {
     for (let i = 10; i < json.length; i++) {
         const jsonData = json[i];
         if (i <= 19) {
