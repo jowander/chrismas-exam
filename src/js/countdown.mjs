@@ -23,8 +23,8 @@
 export function countdown() {
     const bidEnd = sessionStorage.getItem("bidEnd");
     const endTime = Date.parse(bidEnd);
-    console.log("HEI");
-    console.log(endTime);
+    // console.log("HEI");
+    // console.log(endTime);
 
     // const countDate = new Date().getTime();
     const now = new Date().getTime();
@@ -40,7 +40,7 @@ export function countdown() {
     const textHour = Math.floor((gap % day) / hour);
     const textMinute = Math.floor((gap % hour) / minute);
     const textSecond = Math.floor((gap % minute) / second);
-    console.log(gap);
+    // console.log(gap);
 
     const showDay = (document.querySelector(".day").innerText = textDay);
     const showHour = (document.querySelector(".hour").innerText = textHour);
