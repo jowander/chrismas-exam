@@ -22,7 +22,7 @@
     ```
 
 
-## Guide to run scripts
+## Guide to run the app
 ---
 1. Run Tailwind css in the command line with:
 
@@ -35,3 +35,14 @@
     ```bash
     npm run live
     ```
+
+## Guide to testing
+
+1. Install Cypress with the command line:
+
+    ```
+    bash
+    npm i -D cypress@10.7.0 eslint-plugin-cypress@2.12.1
+    ```
+
+2. 
