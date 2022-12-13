@@ -19,9 +19,9 @@
                 <li><a class="p-2" href="#">Profile</a></li>
             </ul>
         </nav>
-        <section class="w-screen h-screen flex">
+        <section class="w-screen h-screen flex justify-center">
             <div
-                class="form-container rounded-sm p-6 flex flex-col text-center"
+                class="form-container rounded-sm mx-auto p-6 flex flex-col text-center"
             >
                 <form id="register-form" class="mt-4">
                     <h2 class="text-primaryGreen p-4 text-2xl">
@@ -48,24 +48,13 @@
                         placeholder="Password*"
                         class="border rounded-sm w-11/12 p-1 my-2"
                     />
-                    <div>
-                        <a
-                            class="text-xs underline text-blue-600"
-                            href="./registerUser.html"
-                            >Register new account?</a
-                        >
-                    </div>
-                    <div
-                        class="rounded-sm text-fontColor bg-secondaryGreen text-center m-4"
+                    <button
+                        id="login-btn"
+                        class="text-fontColor bg-secondaryGreen border rounded-sm w-11/12 p-4 my-2"
+                        type="submit"
                     >
-                        <button
-                            id="login-btn"
-                            class="text-fontColor px-4 py-2"
-                            type="submit"
-                        >
-                            Create User
-                        </button>
-                    </div>
+                        Create User
+                    </button>
                 </form>
             </div>
         </section>

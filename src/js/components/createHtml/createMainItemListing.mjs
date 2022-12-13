@@ -1,7 +1,7 @@
 "use strict";
 export function createMainItemListing(itemCard, media, title, id) {
     const createHtml =
-        (itemCard.innerHTML += `<div class="card border border-secondaryGreen rounded-lg w-64 m-8">  
+        (itemCard.innerHTML += `<div class="card border border-secondaryGreen rounded-lg w-64 mx-auto my-4">  
                                     <div class="">
                                         <img class="rounded-t-lg w-64 h-64" src="${media}" alt="" onerror="this.src = '../../../images/userPlacegolder.png';">
                                     </div>

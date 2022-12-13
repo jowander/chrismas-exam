@@ -34,6 +34,8 @@ export async function addPost(e) {
         console.log(title);
     } catch (error) {
         console.log(error);
+    } finally {
+        window.location.reload();
     }
 }
 
