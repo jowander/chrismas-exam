@@ -20,13 +20,15 @@
 // const parsedTime = json.endsAt;
 // console.log(parsedTime);
 
-export function countdown(bidEnd) {
+export function countdown() {
+    const bidEnd = sessionStorage.getItem("bidEnd");
     const endTime = Date.parse(bidEnd);
+    console.log("HEI");
     console.log(endTime);
 
-    const countDate = new Date().getTime();
+    // const countDate = new Date().getTime();
     const now = new Date().getTime();
-    const gap = countDate - now;
+    const gap = endTime - now;
 
     const second = 1000;
     const minute = second * 60;
