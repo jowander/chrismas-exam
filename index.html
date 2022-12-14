@@ -11,6 +11,7 @@
         ></script>
         <script src="./src/js/searchListing.mjs" type="module"></script>
         <script src="./src/js/hamburgerMenu.mjs" type="module"></script>
+        <script src="./src/js/logout.mjs" type="module"></script>
         <link rel="stylesheet" href="../dist/output.css" />
         <title>Listings</title>
     </head>
@@ -52,7 +53,17 @@
                                 placeholder="Search..."
                             />
                         </div>
-                        <div id="profile-avatar"></div>
+                        <div class="flex self-end">
+                            <div class="">
+                                <button
+                                    id="logout-btn"
+                                    class="bg-primaryGreen p-1 rounded-sm text-fontColor"
+                                >
+                                    Logout
+                                </button>
+                            </div>
+                            <div id="profile-avatar"></div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -61,7 +72,7 @@
                     View Listings
                 </h2>
             </div>
-            <div id="item-card" class="grid grid-cols-1 md:grid-cols-5">
+            <div id="item-card" class="md:flex md:flex-wrap">
                 <div class="text-center my-4">
                     <div role="status">
                         <svg
