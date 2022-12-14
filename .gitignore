@@ -8,4 +8,5 @@
 node_modules/
 .vscode/
 dist/
-cypress/
+cypress/screenshots
+cypress/videos
