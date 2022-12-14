@@ -3,9 +3,7 @@ const speed = 500;
 describe("Login and change avatar", () => {
     it("Login in, go to profile page, change avatar", () => {
         cy.visit("/src/login.html");
-        cy.get('[data-cy="login-email-input"]').type("jowander@stud.noroff.no");
-        cy.get('[data-cy="login-password-input"]').type("jowander");
-        cy.get('[data-cy="login-btn"]').click();
+        cy.login("jowander@stud.noroff.no", "jowander");
         cy.url().should("include", "/index.html");
         cy.get('[data-cy="hamburger-btn"]').click();
         cy.get('[data-cy="profile-page"]').click();

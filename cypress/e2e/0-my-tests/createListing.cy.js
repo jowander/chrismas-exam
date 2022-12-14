@@ -3,9 +3,7 @@ const speed = 1000;
 describe("Login with as valid user, then post item", () => {
     it("Navigate to profile page, post a post", () => {
         cy.visit("/src/login.html");
-        cy.get('[data-cy="login-email-input"]').type("jowander@stud.noroff.no");
-        cy.get('[data-cy="login-password-input"]').type("jowander");
-        cy.get('[data-cy="login-btn"]').click();
+        cy.login("jowander@stud.noroff.no", "jowander");
         cy.url().should("include", "/index.html");
         cy.get('[data-cy="hamburger-btn"]').click();
         cy.get('[data-cy="profile-page"]').click();

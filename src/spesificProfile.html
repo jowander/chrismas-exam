@@ -19,30 +19,62 @@
             type="module"
         ></script>
         <script src="./js/searchProfileListing.mjs" type="module"></script>
+        <script src="./js/hamburgerMenu.mjs" type="module"></script>
         <link rel="stylesheet" href="../dist/output.css" />
         <title>Spesific Profile</title>
     </head>
     <body>
-        <nav class="flex justify-between bg-primaryGreen">
-            <h1 class="font-bold text-fontColor p-4 text-2xl">Auction House</h1>
-            <div class="p-4 md:hidden">
-                <img src="../images/hamburger.png" alt="hamburger icon" />
+        <div class="flex justify-between bg-primaryGreen">
+            <h1 class="font-bold text-fontColor p-4 text-2xl">
+                <a href="../index.html">Auction House</a>
+            </h1>
+            <div>
+                <button
+                    id="menu-btn"
+                    type="button"
+                    class="z-40 block hamburger focus:outline-none"
+                    data-cy="hamburger-btn"
+                >
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
             </div>
-            <ul class="flex p-4 my-auto hidden">
-                <li><a class="p-2" href="#">Home</a></li>
-                <li><a class="p-2" href="#">Profile</a></li>
-            </ul>
-        </nav>
-        <div class="h-10 p-2 bg-secondaryGreen">
-            <input
-                id="search-input-profile"
-                class="rounded-sm"
-                type="text"
-                placeholder="Search..."
-            />
         </div>
+        <nav
+            id="menu"
+            class="top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-center text-fontColor bg-primaryGreen"
+        >
+            <a href="./index.html" class="">Home</a>
+            <a href="./src/spesificProfile.html" data-cy="profile-page" class=""
+                >Profile</a
+            >
+            <a href="./src/login.html" data-cy="login-link" class="">Login</a>
+        </nav>
 
         <main class="">
+            <section>
+                <div class="">
+                    <div class="flex justify-between p-2 bg-secondaryGreen">
+                        <div class="content-center">
+                            <input
+                                id="search-input"
+                                class="rounded-sm h-10"
+                                type="text"
+                                placeholder="Search..."
+                                data-cy="search-input-profile"
+                            />
+                        </div>
+                        <div class="flex self-end">
+                            <div
+                                id="logout-btn"
+                                class="flex items-center"
+                            ></div>
+                            <div id="profile-avatar"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <h2
                 class="text-primaryGreen text-center text-2xl font-semibold p-4"
             >
