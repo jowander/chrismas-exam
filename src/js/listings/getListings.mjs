@@ -51,6 +51,7 @@ showMore.addEventListener("click", () => {
                 jsonData.title,
                 jsonData.id
             );
+            showMore.classList.add("hidden");
         }
     }
 });

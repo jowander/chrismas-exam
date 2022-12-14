@@ -16,6 +16,7 @@ const id = params.get("id");
 const listingBtn = document.querySelector("#spesific-listing-btn");
 const spesificItem = document.querySelector("#item-images");
 const spesificListingInfo = document.querySelector("#profile-info");
+const bidBtn = document.querySelector("#bid-btn");
 
 const json = await apiCallGetListings(
     `${baseUrl}/listings/${id}?_seller=true`,
@@ -36,4 +37,5 @@ const listingsOwner = json.seller.name;
 if (user === listingsOwner) {
     listingBtn.classList.contains("listing-btn");
     listingBtn.classList.remove("hidden");
+    bidBtn.classList.add("hidden");
 }

@@ -21,6 +21,7 @@ const json = await apiCallProfiles(
     `${baseUrl}/profiles/${user}`,
     optionGetAuth
 );
+console.log(json);
 
 profileListings.innerHTML = "";
 
@@ -31,7 +32,16 @@ const jsonListings = await apiCallGetListings(
     `${baseUrl}/profiles/${user}/listings`,
     optionGetAuth
 );
+
 for (let i = 0; i < jsonListings.length; i++) {
     const jsonData = jsonListings[i];
     createProfileListing(profileListings, jsonData);
+}
+
+const numberOfListings = json._count.listings;
+console.log(numberOfListings);
+if (numberOfListings === 0) {
+    profileListings.innerHTML = `<div class="bg-primaryGreen rounded-sm font-bold m-4 p-6 md:mx-auto">
+                                    <p class="text-xl text-fontColor">You dont have any listings posted!</p>
+                                </div>`;
 }
