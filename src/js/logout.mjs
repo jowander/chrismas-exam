@@ -8,7 +8,7 @@ logoutBtn.addEventListener("click", () => {
 });
 
 if (user) {
-    logoutBtn.innerHTML = `<button id="logout-btn" class="bg-primaryGreen p-1 rounded-sm text-fontColor">Logout</button>`;
+    logoutBtn.innerHTML = `<button id="logout-btn" class="bg-yellow-500 font-bold p-2 rounded-sm text-primaryGreen">Logout</button>`;
 } else {
-    logoutBtn.innerHTML = `<a href="./src/login.html" id="logout-btn" class="bg-primaryGreen p-1 rounded-sm text-fontColor">Login</a>`;
+    logoutBtn.innerHTML = `<a href="./src/login.html" id="logout-btn" class="font-bold bg-primaryGreen p-2 rounded-sm text-fontColor">Login</a>`;
 }
