@@ -3,7 +3,7 @@ export function createProfileListing(itemCard, json) {
     const createHtml =
         (itemCard.innerHTML += `<div class="card border border-primaryGreen rounded-lg w-64 mx-auto my-4">  
                                                     <div class="">
-                                                        <img class="rounded-t-lg w-64 h-64" src="${json.media}" alt="" onerror="this.src = '../../../images/userPlacegolder.png';">
+                                                        <img class="rounded-t-lg w-64 h-64" src="${json.media}" alt="" onerror="this.src = './images/userPlacegolder.png';">
                                                     </div>
                                                     <div class="text-center">
                                                         <div class="h-24">
