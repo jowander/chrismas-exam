@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 export async function apiCallGetListings(baseUrl, headers) {
     try {
         const response = await fetch(baseUrl, headers);
@@ -12,15 +12,15 @@ export async function apiCallGetListings(baseUrl, headers) {
 export const optionGet = {
     method: "GET",
     headers: {
-       "Content-type": "application/json",
+        "Content-type": "application/json",
     },
-}
+};
 
 const token = localStorage.getItem("accessToken");
 
 export const optionGetAuth = {
     method: "GET",
     headers: {
-       Authorization: `Bearer ${token}`
+        Authorization: `Bearer ${token}`,
     },
-}
+};

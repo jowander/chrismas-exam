@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 const bidModalBtn = document.querySelector("#bid-btn");
 const bidModalOpen = document.querySelector(".open-bid-modal");
 
