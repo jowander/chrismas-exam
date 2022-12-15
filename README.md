@@ -40,9 +40,12 @@
 
 1. Install Cypress with the command line:
 
-    ```
-    bash
+    ```bash
     npm i -D cypress@10.7.0 eslint-plugin-cypress@2.12.1
     ```
 
-2. 
+2. Run Cypress tests in the command line with:
+
+    ```bash
+    npm run test-e2e-cli
+    ```

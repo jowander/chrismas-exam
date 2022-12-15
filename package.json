@@ -24,6 +24,7 @@
     "@babel/eslint-parser": "^7.19.1",
     "@babel/preset-env": "^7.20.2",
     "cypress": "^10.7.0",
+    "cypress-mochawesome-reporter": "^3.2.3",
     "eslint": "^8.29.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-jest": "^27.1.6",
