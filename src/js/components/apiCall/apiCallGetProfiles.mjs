@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 //import { createSpesificProfile } from "../components/createHtml/createSpesificProfile.mjs";
 
 export async function apiCallProfiles(baseUrl, headers) {
@@ -16,6 +16,6 @@ const token = localStorage.getItem("accessToken");
 export const optionGetAuth = {
     method: "GET",
     headers: {
-       Authorization: `Bearer ${token}`
+        Authorization: `Bearer ${token}`,
     },
-}
+};

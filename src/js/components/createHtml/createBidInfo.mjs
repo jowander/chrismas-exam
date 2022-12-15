@@ -1,14 +1,13 @@
-export function createBidInfo(spesificListingBids, json) {
-    for(let i = 0; i < json.bids.length; i++) {
-        const createHtml = (spesificListingBids.innerHTML += `<div class="card border rounded-lg mx-4 my-8">  
-                                                        <div class="">
-                                                            <h2>${json.bids[i].bidderName}</h2>
+export function createBidInfo(spesificListingBids, bidderName, amount) {
+    const createHtml =
+        (spesificListingBids.innerHTML += `<div class="card border border-secondaryGreen rounded-lg w-64 mx-auto my-4">  
+                                                        <div class="text-center">
+                                                            <h2 class="text-xl">Bidder: ${bidderName}</h2>
                                                         </div>
                                                         <div class="text-center">
                                                             <div class="py-2">
-                                                                <h2 class="text-lg py-2">${json.bids[i].amount}</h2>
+                                                                <h2 class="text-lg py-2">Bid: ${amount}</h2>
                                                             </div>
                                                     </div>`);
-        return createHtml;
-    }
+    return createHtml;
 }
