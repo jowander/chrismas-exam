@@ -49,3 +49,14 @@
     ```bash
     npm run test-e2e-cli
     ```
+
+3. If you like to watch the testing in desktop version run:
+    ```bash
+    npm run test-e2e
+    ```
+## Report generated
+1. Run this command to generate report from Cypress(mochawesome):
+
+    ```bash
+    npm run test-e2e-report
+    ```
