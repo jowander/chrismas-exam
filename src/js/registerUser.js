@@ -23,6 +23,8 @@ async function registerUser(e) {
         console.log(json);
     } catch (error) {
         console.log(error);
+    } finally {
+        window.location.href = "./login.html";
     }
 }
 
