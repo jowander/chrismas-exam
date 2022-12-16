@@ -3,7 +3,7 @@ export function createMainItemListing(itemCard, media, title, id) {
     const createHtml =
         (itemCard.innerHTML += `<div class="card border border-secondaryGreen rounded-lg w-64 mx-8 my-4">  
                                     <div class="">
-                                        <img class="rounded-t-lg w-64 h-64" src="${media}" alt="" onerror="this.src = '../../../images/userPlacegolder.png';">
+                                        <img class="rounded-t-lg w-64 h-64" src="${media}" alt="" onerror="this.src = './images/userPlacegolder.png';">
                                     </div>
                                     <div class="text-center">
                                         <div class="h-24">
