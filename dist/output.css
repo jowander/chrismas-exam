@@ -575,6 +575,10 @@ video {
   margin: auto;
 }
 
+.m-2{
+  margin: 0.5rem;
+}
+
 .mx-8{
   margin-left: 2rem;
   margin-right: 2rem;
@@ -732,6 +736,10 @@ video {
 
 .max-w-md{
   max-width: 28rem;
+}
+
+.max-w-2xl{
+  max-width: 42rem;
 }
 
 @keyframes spin{
