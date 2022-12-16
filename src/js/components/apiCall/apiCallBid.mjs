@@ -20,7 +20,10 @@ async function placeBid(e) {
                 amount: parseInt(bidInput),
             }),
         };
-        const response = await fetch(`${baseUrl}/listings/${id}/bids`, options);
+        const response = await fetch(
+            `${baseUrl}/listings/${id}/bids?sortOrder=desc`,
+            options
+        );
         const json = await response.json();
         console.log(json);
     } catch (error) {

@@ -68,9 +68,11 @@
         <div
             id="bid-modal"
             tabindex="-1"
-            class="open-bid-modal hidden fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+            class="open-bid-modal hidden bg-primaryGreen fixed z-50 w-full p-4 md:inset-0 md:h-full"
         >
-            <div class="relative w-full h-full max-w-md md:h-auto">
+            <div
+                class="relative m-auto content-center w-full h-full max-w-md md:h-auto"
+            >
                 <!-- Modal content -->
                 <div
                     class="relative bg-white rounded-lg shadow dark:bg-gray-700"
@@ -94,10 +96,9 @@
                                     id="bid"
                                     class="border rounded-sm w-11/12 p-1 my-2"
                                     placeholder="Bid amount"
-                                    required
                                 />
                             </div>
-                            <div class="text-center">
+                            <div class="flex justify-between text-center">
                                 <button
                                     id="place-bid-btn-modal"
                                     type="submit"
@@ -107,6 +108,14 @@
                                 </button>
                             </div>
                         </form>
+
+                        <button
+                            id="back-bid-btn-modal"
+                            type="submit"
+                            class="rounded-2xl bg-secondaryGreen text-fontColor my-2 py-1 px-5"
+                        >
+                            Go back
+                        </button>
                     </div>
                 </div>
             </div>
