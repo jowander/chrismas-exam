@@ -575,6 +575,14 @@ video {
   margin: 1rem;
 }
 
+.m-auto{
+  margin: auto;
+}
+
+.m-2{
+  margin: 0.5rem;
+}
+
 .mx-8{
   margin-left: 2rem;
   margin-right: 2rem;
@@ -846,6 +854,15 @@ video {
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
 
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-transparent{
+  background-color: transparent;
+}
+
 .fill-primaryGreen{
   fill: #4d737a;
 }
@@ -904,6 +921,21 @@ video {
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .pt-40{
@@ -986,6 +1018,14 @@ video {
 
 .underline{
   text-decoration-line: underline;
+}
+
+.opacity-5{
+  opacity: 0.05;
+}
+
+.opacity-75{
+  opacity: 0.75;
 }
 
 .shadow{
