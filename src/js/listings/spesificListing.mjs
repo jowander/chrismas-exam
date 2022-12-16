@@ -27,22 +27,22 @@ const json = await apiCallGetListings(
     optionGet
 );
 
-console.log(json.bids);
 const parsedTime = Date.parse(json.endsAt);
 console.log(parsedTime);
 
 const latestBidArray = json.bids;
+console.log(latestBidArray);
 const latestBid = latestBidArray.slice(-1);
-const latestBidder = latestBidArray[0].bidderName;
-const latestBidAmount = latestBid[0].amount;
-console.log(latestBid[0].amount);
-
+if (latestBidArray.length >= 1) {
+    const latestBidder = latestBidArray[0].bidderName;
+    const latestBidAmount = latestBid[0].amount;
+    createLatestBid(latestBidContainer, latestBidder, latestBidAmount);
+}
 sessionStorage.setItem("bidEnd", json.endsAt);
 
 createSpesificPostTitle(postTitle, json);
 createSpesificProfileImage(spesificItem, json);
 createSpesificListingInfo(spesificListingInfo, json);
-createLatestBid(latestBidContainer, latestBidder, latestBidAmount);
 
 const listingsOwner = json.seller.name;
 
