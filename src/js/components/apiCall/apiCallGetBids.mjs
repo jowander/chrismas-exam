@@ -14,6 +14,8 @@ async function getBids() {
         const spesificListingBids = document.querySelector("#display-bids");
 
         const data = json.bids;
+        const latestBid = data.slice(-1);
+        console.log(latestBid[0].amount);
         data.forEach((bid) => {
             createBidInfo(spesificListingBids, bid.bidderName, bid.amount);
         });

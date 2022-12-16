@@ -19,10 +19,15 @@ async function registerUser(e) {
             }),
         };
         const response = await fetch(`${baseUrl}/auth/register`, options);
-        const json = await response.json();
-        console.log(json);
+        // const json = await response.json();
+
+        if (response.ok) {
+            window.location.href = "./login.html";
+        }
     } catch (error) {
         console.log(error);
+    } finally {
+        window.location.href = "./login.html";
     }
 }
 

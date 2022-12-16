@@ -39,10 +39,10 @@
     </head>
     <body>
         <div class="flex justify-between bg-primaryGreen">
-            <h1 class="font-bold text-fontColor p-4 text-2xl">
+            <h1 class="font-bold text-fontColor p-4 mx-8 text-2xl">
                 <a href="../index.html">Auction House</a>
             </h1>
-            <div>
+            <div class="mx-8">
                 <button
                     id="menu-btn"
                     type="button"
@@ -59,11 +59,9 @@
             id="menu"
             class="top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-center text-fontColor bg-primaryGreen"
         >
-            <a href="./../index.html" class="">Home</a>
-            <a href="./spesificProfile.html" data-cy="profile-page" class=""
-                >Profile</a
-            >
-            <a href="./login.html" data-cy="login-link" class="">Login</a>
+            <a href="../index.html">Home</a>
+            <a href="./spesificProfile.html" data-cy="profile-page">Profile</a>
+            <a href="./login.html" data-cy="login-link">Login</a>
         </nav>
 
         <!-- Main modal -->
@@ -144,6 +142,7 @@
                         </div>
                         <div class="text-center">
                             <div id="profile-info"></div>
+                            <div id="latestBid"></div>
                             <div class="countdown flex justify-evenly">
                                 <div class="container-day">
                                     <p class="day">Time</p>

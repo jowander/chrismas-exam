@@ -6,6 +6,7 @@ import {
 import { createSpesificProfileImage } from "../components/createHtml/createSpesificProfileImage.mjs";
 import { createSpesificListingInfo } from "../components/createHtml/createSpesificListingInfo.mjs";
 import { createSpesificPostTitle } from "../components/createHtml/createSpesificPostTitle.mjs";
+import { createLatestBid } from "../components/createHtml/createLatestBid.mjs";
 
 const baseUrl = "https://api.noroff.dev/api/v1/auction";
 const user = localStorage.getItem("userName");
@@ -19,16 +20,24 @@ const spesificItem = document.querySelector("#item-images");
 const spesificListingInfo = document.querySelector("#profile-info");
 const bidBtn = document.querySelector("#bid-btn");
 const postTitle = document.querySelector("#post-title");
+const latestBidContainer = document.querySelector("#latestBid");
 
 const json = await apiCallGetListings(
-    `${baseUrl}/listings/${id}?_seller=true`,
+    `${baseUrl}/listings/${id}?_seller=true&_bids=true`,
     optionGet
 );
 
-console.log(json);
 const parsedTime = Date.parse(json.endsAt);
 console.log(parsedTime);
 
+const latestBidArray = json.bids;
+console.log(latestBidArray);
+const latestBid = latestBidArray.slice(-1);
+if (latestBidArray.length >= 1) {
+    const latestBidder = latestBidArray[0].bidderName;
+    const latestBidAmount = latestBid[0].amount;
+    createLatestBid(latestBidContainer, latestBidder, latestBidAmount);
+}
 sessionStorage.setItem("bidEnd", json.endsAt);
 
 createSpesificPostTitle(postTitle, json);
