@@ -43,14 +43,19 @@
             >
                 <form id="loginForm" class="mt-4">
                     <h2 class="text-primaryGreen p-4 text-2xl">Login</h2>
-                    <input
-                        type="email"
-                        name="user-email"
-                        id="email"
-                        placeholder="example@stud.noroff.no*"
-                        class="border rounded-sm w-11/12 p-1 my-2"
-                        data-cy="login-email-input"
-                    />
+                    <div>
+                        <input
+                            type="email"
+                            name="user-email"
+                            id="email"
+                            placeholder="example@stud.noroff.no*"
+                            class="border rounded-sm w-11/12 p-1 my-2"
+                            data-cy="login-email-input"
+                        />
+                        <p class="loginEmail hidden text-xs text-red-700">
+                            Please enter valid email
+                        </p>
+                    </div>
                     <input
                         type="password"
                         name="user-password"
@@ -59,6 +64,9 @@
                         class="border rounded-sm w-11/12 p-1 my-2"
                         data-cy="login-password-input"
                     />
+                    <p class="loginPassword hidden text-xs text-red-700">
+                        Wrong Password
+                    </p>
                     <div>
                         <a
                             class="text-xs underline text-blue-600"

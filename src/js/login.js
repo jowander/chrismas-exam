@@ -23,6 +23,9 @@ async function handleLogin(e) {
     const response = await logIn(url, userLogin);
     if (response.status === 200) {
         window.location.href = "./index.html";
+    } else {
+        document.querySelector(".loginEmail").classList.remove("hidden");
+        document.querySelector(".loginPassword").classList.remove("hidden");
     }
 }
 

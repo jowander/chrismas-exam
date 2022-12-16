@@ -30,13 +30,18 @@ export async function addPost(e) {
         };
 
         const response = await fetch(`${baseUrl}/listings`, options);
-        const json = await response.json();
+        //const json = await response.json();
         if (response.ok) {
             window.location.reload();
+        } else {
+            document.querySelector(".postTitle").classList.remove("hidden");
+            document.querySelector(".postMedia").classList.remove("hidden");
+            document.querySelector(".postDate").classList.remove("hidden");
         }
-        console.log(json);
-        console.log(title);
     } catch (error) {
+        document.querySelector(".postTitle").classList.remove("hidden");
+        document.querySelector(".postMedia").classList.remove("hidden");
+        document.querySelector(".postDate").classList.remove("hidden");
         console.log(error);
     }
 }

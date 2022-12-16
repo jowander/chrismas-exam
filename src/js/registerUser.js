@@ -22,6 +22,14 @@ async function registerUser(e) {
 
         if (response.ok) {
             window.location.href = "./login.html";
+        } else {
+            document
+                .querySelector(".registerUsername")
+                .classList.remove("hidden");
+            document.querySelector(".registerEmail").classList.remove("hidden");
+            document
+                .querySelector(".registerPassword")
+                .classList.remove("hidden");
         }
     } catch (error) {
         console.log(error);

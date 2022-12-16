@@ -146,6 +146,11 @@
                                     placeholder="Title"
                                     data-cy="title-input"
                                 />
+                                <p
+                                    class="postTitle hidden bg-red-700 mx-auto w-11/12 text-xs text-fontColor"
+                                >
+                                    Please enter a title
+                                </p>
                                 <input
                                     id="bid-item-media"
                                     class="rounded-sm w-11/12 p-1 my-2"
@@ -153,6 +158,12 @@
                                     placeholder="Media"
                                     data-cy="media-input"
                                 />
+                                <p
+                                    class="postMedia hidden bg-red-700 mx-auto w-11/12 text-xs text-fontColor"
+                                >
+                                    Please enter valid image link:
+                                    https://example.png
+                                </p>
                                 <input
                                     id="bid-item-end"
                                     class="rounded-sm w-11/12 p-1 my-2"
@@ -160,6 +171,11 @@
                                     placeholder="Date: 14 Jan 2023"
                                     data-cy="bid-end"
                                 />
+                                <p
+                                    class="postDate hidden bg-red-700 mx-auto w-11/12 text-xs text-fontColor"
+                                >
+                                    Please enter valid date: 14 Jan 2023
+                                </p>
                                 <input
                                     id="bid-item-description"
                                     class="rounded-sm w-11/12 p-1 my-2"
@@ -185,7 +201,10 @@
                     My Listings
                 </h2>
             </div>
-            <div id="item-card" class="mx-auto md:flex md:flex-wrap">
+            <div
+                id="item-card"
+                class="md:flex md:flex-wrap justify-center mx-24"
+            >
                 <div class="text-center my-4">
                     <div role="status">
                         <svg
