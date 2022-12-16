@@ -12,6 +12,7 @@ async function getBids() {
         const response = await fetch(`${baseUrl}/listings/${id}?_bids=true`);
         const json = await response.json();
         const spesificListingBids = document.querySelector("#display-bids");
+        const showBidButton = document.querySelector("#show-bids-btn");
 
         const data = json.bids;
         const latestBid = data.slice(-1);
@@ -19,6 +20,9 @@ async function getBids() {
         data.forEach((bid) => {
             createBidInfo(spesificListingBids, bid.bidderName, bid.amount);
         });
+        if (response.ok) {
+            showBidButton.classList.add("hidden");
+        }
         console.log(data);
     } catch (error) {
         console.log(error);
