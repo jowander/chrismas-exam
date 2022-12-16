@@ -5,7 +5,6 @@ const token = localStorage.getItem("accessToken");
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const modalInput = document.querySelector("#bid");
 
 async function placeBid(e) {
     try {
@@ -29,7 +28,7 @@ async function placeBid(e) {
         if (response.ok) {
             window.location.reload();
         } else {
-            modalInput.style = "bg-red-500";
+            document.querySelector(".bidModal").classList.remove("hidden");
         }
 
         console.log(json);

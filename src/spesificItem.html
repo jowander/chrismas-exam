@@ -34,6 +34,7 @@
             type="module"
         ></script>
         <script src="./js/hamburgerMenu.mjs" type="module"></script>
+        <script src="./js/toggleModal.mjs" type="module"></script>
         <link rel="stylesheet" href="../dist/output.css" />
         <title>Spesific Item</title>
     </head>
@@ -97,6 +98,9 @@
                                     class="border rounded-sm w-11/12 p-1 my-2"
                                     placeholder="Bid amount"
                                 />
+                                <p class="bidModal hidden text-xs text-red-700">
+                                    You must bid higher than the last bid
+                                </p>
                             </div>
                             <div class="flex justify-between text-center">
                                 <button

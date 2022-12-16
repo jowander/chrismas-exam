@@ -25,6 +25,9 @@ export async function editAvatar(e) {
             options
         );
         const json = await response.json();
+        if (response.ok) {
+            window.location.reload();
+        }
         console.log(json);
     } catch (error) {
         console.log(error);
